@@ -5,19 +5,18 @@
 }
 
 body {
-  background-color: rgb(25, 17, 34);
-  color: white;
-  margin: 0;
+  overflow: hidden;
 }
 
 .sidebar {
   margin: 0;
   padding: 0;
   width: 200px;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   position: fixed;
   height: 100%;
   overflow: auto;
+  border-right: 1px solid black;
 }
 
 .sidebar a,
@@ -39,10 +38,14 @@ p {
 }
 
 a,
-.header {
+header {
   border-bottom: 1px solid black;
 }
 
-.header {
-  background-color: rgb(177, 169, 169);
+h1 {
+  margin: 17px;
+}
+
+main {
+  background-color: red;
 }

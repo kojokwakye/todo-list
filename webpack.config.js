@@ -12,9 +12,9 @@ module.exports = {
   },
   devtool: "eval-source-map",
   devServer: {
-    // contentBase: path.join(__dirname, "public"), 
-    watchFiles: ["./src/template.html"],
+    watchFiles: ["./src/**/*.js", "./src/**/*.css", "./src/**/*.html"],
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
@@ -25,6 +25,7 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
+        sourceMap: true,
       },
       {
         test: /\.html$/i,
@@ -33,6 +34,9 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+        generator: {
+          filename: "assets/images/[hash][ext][query]", // This will place images in a folder named 'assets/images' in the dist folder
+        },
       },
     ],
   },

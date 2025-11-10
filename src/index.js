@@ -1,9 +1,34 @@
-import "./style.css";
+// import "./style.css";
 
-class List {
-  constructor() {
+const toDoList = [];
+
+class Task {
+  constructor(title, description, dueDate, priority, checklist) {
     if (!new.target) throw new Error("Must use 'new' with List");
+    this.title = title;
+    this.description = description;
+    this.dueDate = dueDate;
+    this.priority = priority;
+    this.checklist = checklist;
+    this.id = crypto.randomUUID();
+  }
+  toggleDone() {
+    this.checklist = !this.checklist;
   }
 }
 
+addList(new Task(title, description, dueDate, priority, checklist));
 
+// add list
+function addList(task) {
+  toDoList.push(task);
+}
+
+// remove or delete task/list and put them in completed
+function removeList(taskId, element) {
+  const index = toDoList.findIndex((task) => task.id === taskId);
+  if (index !== -1) {
+    addList.splice(index, 1);
+    element.remove();
+  }
+}

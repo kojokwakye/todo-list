@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(172, 172, 172);
+  color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}

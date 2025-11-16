@@ -17,7 +17,6 @@ class Task {
   }
 }
 
-// addList(new Task(title, description, dueDate, priority, checklist));
 
 // add list
 function addList(task) {

@@ -21,7 +21,6 @@ class Task {
 // add list
 function addList(task) {
   toDoList.push(task);
-  // console.log(task);
 }
 
 addList(
